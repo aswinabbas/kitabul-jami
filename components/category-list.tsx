@@ -1,9 +1,8 @@
 "use client"
 
-import { ChevronRight, Heart, Book, Star } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
-import { OnlineStatus } from "./online-status"
 import hadits from "@/data/hadits.json"
+import { Book, ChevronRight, Heart, Star } from "lucide-react"
 
 const hadithData = hadits;
 const lengthAdab = hadithData.filter(r => r.bab === "1").length;
@@ -36,14 +35,8 @@ export function CategoryList({ isDarkMode, isOnline, isOfflineReady, onCategoryC
     >
       <div className="container mx-auto px-4 py-8 max-w-md">
         <div className="mb-6">
-          <div className="flex items-center justify-between mb-2">
+          <div className="flex items-center justify-between -mb-1">
             <h2 className={`text-xl font-bold ${isDarkMode ? "text-white" : "text-gray-900"}`}>Kategori</h2>
-            <OnlineStatus
-              isOnline={isOnline}
-              isOfflineReady={isOfflineReady}
-              showOfflineReady={true}
-              isDarkMode={isDarkMode}
-            />
           </div>
           <p className={`text-sm ${isDarkMode ? "text-slate-400" : "text-gray-500"}`}>
             Pilih kategori hadis
@@ -64,16 +57,6 @@ export function CategoryList({ isDarkMode, isOnline, isOfflineReady, onCategoryC
               >
                 <CardContent className="flex items-center justify-between px-4 py-0">
                   <div className="flex items-center gap-3">
-                    {/* <div
-                      className={`w-8 h-8 rounded-xl ${category.color} flex items-center justify-center`}
-                      style={{
-                        backgroundImage: `url('/--category-name--icon.jpg')`,
-                        backgroundSize: "cover",
-                        backgroundPosition: "center",
-                      }}
-                    >
-                      <IconComponent className="h-4 w-4 text-white" />
-                    </div> */}
                     <div>
                       <h3 className={`font-medium ${isDarkMode ? "text-white" : "text-gray-900"}`}>{category.name}</h3>
                       <p className={`text-xs ${isDarkMode ? "text-slate-400" : "text-gray-500"}`}>

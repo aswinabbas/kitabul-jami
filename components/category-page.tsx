@@ -3,7 +3,6 @@
 import { Button } from "@/components/ui/button"
 import { ArrowLeft } from "lucide-react"
 import { HadithCard } from "./hadith-card"
-import { OnlineStatus } from "./online-status"
 
 interface HadithData {
   bab: string
@@ -59,7 +58,6 @@ export function CategoryPage({
               {filteredHadith.length} hadis tersedia
             </p>
           </div>
-          <OnlineStatus isOnline={isOnline} isDarkMode={isDarkMode} />
         </div>
 
         {/* Search Bar */}

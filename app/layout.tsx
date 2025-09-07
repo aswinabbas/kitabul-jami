@@ -1,5 +1,7 @@
 import type React from "react"
 import type { Metadata } from "next"
+import { GeistSans } from "geist/font/sans";
+import { GeistMono } from 'geist/font/mono';
 import { Inter, Roboto_Mono, Scheherazade_New } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
@@ -18,6 +20,7 @@ const robotoMono = Roboto_Mono({
   variable: "--font-roboto-mono",
   display: "swap",
 })
+
 
 // Arabic font
 const scheherazadeNew = Scheherazade_New({
@@ -61,7 +64,8 @@ export default function RootLayout({
   return (
     <html
       lang="id"
-      className={`dark ${inter.variable} ${robotoMono.variable} ${scheherazadeNew.variable}`}
+      // className={`dark ${inter.variable} ${robotoMono.variable} ${scheherazadeNew.variable}`}
+      className={`dark ${GeistSans.variable} ${GeistMono.variable} ${scheherazadeNew.variable}`}
     >
       <head>
         <meta

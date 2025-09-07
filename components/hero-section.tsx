@@ -1,6 +1,5 @@
 "use client"
 
-import { ChevronDown } from "lucide-react"
 import { ThemeToggle } from "./theme-toggle"
 
 interface HeroSectionProps {
@@ -30,31 +29,10 @@ export function HeroSection({ isDarkMode, onThemeToggle, onScrollToCategories }:
 
           <div className="mb-0">
             <h1 className={`text-4xl font-bold -mb-1 ${isDarkMode ? "text-white" : "text-gray-900"}`}>Kitabul Jami</h1>
-            <p className={`text-lg ${isDarkMode ? "text-gray-200" : "text-gray-800"}`}>
+            <p className={`text-lg font-light ${isDarkMode ? "text-gray-200" : "text-gray-800"}`}>
               Al Hafidz Ibnu Hajar Al-Asqalani
             </p>
           </div>
-        </div>
-
-        {/* Hero Content - Scroll Button */}
-        <div className="flex-1 flex items-center justify-center text-center space-y-8">
-          {/* Attribution */}
-          {/* <div className="absolute bottom-6 right-6">
-            <div
-              className={`px-3 py-2 rounded-lg text-xs ${isDarkMode ? "bg-white/10 text-slate-300" : "bg-white/80 text-gray-600"
-                } backdrop-blur-sm`}
-            >
-              powered by KKI Sufyan bin Uyainah Gorontalo x{" "}
-              <a
-                href="https://itssme.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`underline hover:no-underline ${isDarkMode ? "text-white" : "text-gray-900"}`}
-              >
-                Umaraya Lab
-              </a>
-            </div>
-          </div> */}
         </div>
       </div>
     </div >

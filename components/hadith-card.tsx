@@ -1,6 +1,5 @@
 "use client"
 
-import { ChevronRight } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 
 interface HadithData {
@@ -40,14 +39,14 @@ export function HadithCard({ hadith, index, isExpanded, isDarkMode, onToggle }: 
           <div className={`space-y-4 mt-4 pt-4 border-t ${isDarkMode ? "border-white/10" : "border-gray-200"}`}>
             {/* Arabic Text */}
             <div
-              className={`font-scheherazade text-lg leading-relaxed text-right ${isDarkMode ? "text-white" : "text-gray-900"
+              className={`font-scheherazade text-2xl leading-relaxed text-right ${isDarkMode ? "text-white" : "text-gray-900"
                 }`}
             >
               {hadith.arab}
             </div>
 
             {/* Translation */}
-            <div className={`text-sm leading-relaxed ${isDarkMode ? "text-slate-300" : "text-gray-600"}`}>
+            <div className={`text-base leading-relaxed ${isDarkMode ? "text-slate-300" : "text-gray-600"}`}>
               <strong className={isDarkMode ? "text-white" : "text-gray-900"}>Terjemahan:</strong>
               <br />
               {hadith.terjemahan}
