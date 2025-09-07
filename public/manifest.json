@@ -1,0 +1,26 @@
+{
+  "name": "Kitabul Jami - Hadis Arbain",
+  "short_name": "Kitabul Jami",
+  "description": "Koleksi Hadis Arbain An Nawawi dengan terjemahan Indonesia",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/placeholder.svg?height=192&width=192",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/placeholder.svg?height=512&width=512",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "books", "reference"],
+  "lang": "id"
+}
