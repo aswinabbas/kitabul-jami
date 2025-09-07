@@ -36,6 +36,7 @@ export function CategoryPage({
   onSearchChange,
   onHadithToggle,
 }: CategoryPageProps) {
+
   return (
     <div
       className={`min-h-screen transition-colors duration-300 ${isDarkMode ? "bg-gradient-to-br from-black via-gray-900 to-black" : "bg-white"

@@ -29,6 +29,7 @@ export function HadithCard({ hadith, index, isExpanded, isDarkMode, onToggle }: 
       onClick={onToggle}
     >
       <CardContent className="px-4 py-0">
+        <span className={`font-light text-sm ${isDarkMode ? "text-gray-200" : "text-gray-600"}`}>Hadis ke-{index + 1}</span>
         <div className="flex items-start justify-between mb-0">
           <h3 className={`font-medium text-balance leading-relaxed ${isDarkMode ? "text-white" : "text-gray-900"}`}>
             {hadith.judul}

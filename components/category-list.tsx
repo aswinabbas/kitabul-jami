@@ -12,11 +12,11 @@ const lengthAkhlak = hadithData.filter(r => r.bab === "4").length;
 const lengthDoa = hadithData.filter(r => r.bab === "5").length;
 
 const categories = [
-  { name: "Adab", count: lengthAdab, color: "bg-emerald-500", icon: Heart },
-  { name: "Silaturahim dan Kebaikan", count: lengthSilah, color: "bg-blue-500", icon: Book },
-  { name: "Zuhud dan Wara", count: lengthZuhud, color: "bg-purple-500", icon: Star },
-  { name: "Peringatan Terhadap Akhlak-Akhlak Buruk", count: lengthAkhlak, color: "bg-amber-500", icon: Book },
-  { name: "Dzikir dan Doa", count: lengthDoa, color: "bg-rose-500", icon: Heart },
+  { name: "Adab", count: lengthAdab, bab: "1", color: "bg-emerald-500", icon: Heart },
+  { name: "Silaturahim dan Kebaikan", count: lengthSilah, bab: "2", color: "bg-blue-500", icon: Book },
+  { name: "Zuhud dan Wara", count: lengthZuhud, bab: "3", color: "bg-purple-500", icon: Star },
+  { name: "Peringatan Terhadap Akhlak-Akhlak Buruk", count: lengthAkhlak, bab: "4", color: "bg-amber-500", icon: Book },
+  { name: "Dzikir dan Doa", count: lengthDoa, bab: "5", color: "bg-rose-500", icon: Heart },
 ]
 
 interface CategoryListProps {
@@ -57,6 +57,10 @@ export function CategoryList({ isDarkMode, isOnline, isOfflineReady, onCategoryC
               >
                 <CardContent className="flex items-center justify-between px-4 py-0">
                   <div className="flex items-center gap-3">
+                    <div className={`flex flex-col items-center justify-center w-6 h-6 rounded-lg px-6 py-6 ${isDarkMode ? "bg-gray-800" : "bg-gray-100"}`}>
+                      <span className={`font-normal text-xs ${isDarkMode ? "text-white" : "text-gray-900"}`}>Bab</span>
+                      <span className={`font-normal text-xs ${isDarkMode ? "text-white" : "text-gray-900"}`}>{category.bab}</span>
+                    </div>
                     <div>
                       <h3 className={`font-medium ${isDarkMode ? "text-white" : "text-gray-900"}`}>{category.name}</h3>
                       <p className={`text-xs ${isDarkMode ? "text-slate-400" : "text-gray-500"}`}>
