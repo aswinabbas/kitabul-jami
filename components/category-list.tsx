@@ -57,7 +57,7 @@ export function CategoryList({ isDarkMode, isOnline, isOfflineReady, onCategoryC
               >
                 <CardContent className="flex items-center justify-between px-4 py-0">
                   <div className="flex items-center gap-3">
-                    <div className={`flex flex-col items-center justify-center w-6 h-6 rounded-lg px-6 py-6 ${isDarkMode ? "bg-gray-800" : "bg-gray-100"}`}>
+                    <div className={`flex flex-col items-center justify-center w-6 h-6 rounded-lg px-6 py-6 ${isDarkMode ? "bg-black/35" : "bg-gray-100"}`}>
                       <span className={`font-normal text-xs ${isDarkMode ? "text-white" : "text-gray-900"}`}>Bab</span>
                       <span className={`font-normal text-xs ${isDarkMode ? "text-white" : "text-gray-900"}`}>{category.bab}</span>
                     </div>
